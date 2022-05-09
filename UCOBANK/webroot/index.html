@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>UCOBank</title>
+</head>
+<body>
+    <ul class="top-bar">
+        <li><img src="img/logo.png" alt="Logo UCOBank"></li>
+        <li class="access" onclick="openLoginModal()"><img src="icons/user.svg" alt=""> Acceder</li>
+    </ul>
+
+    <div class="ppal">
+        <div>
+            <h1>Trabajamos con personas</h1>
+            <span onclick="openRegisterModal()">Hazte cliente</span>
+            <p>Infórmate sobre nuestras <a href="#cuentas">cuentas y condiciones</a>.</p>
+        </div>
+    </div>
+
+    <div class="options">
+        <div>
+            <img src="bizum.jpeg" alt="">
+            <h2>Bizum</h2>
+        </div>
+        <div>
+            <img src="transfer.png" alt="">
+            <h2>Transferencias</h2>
+        </div>
+        <div>
+            <img src="trend.png" alt="">
+            <h2>Estadísticas</h2>
+        </div>
+        <div>
+            <img src="cards.png" alt="">
+            <h2>Tarjetas</h2>
+        </div>
+    </div>
+
+    <div class="cuentas" id="cuentas">
+        <div class="cuenta">
+            <h1>Cuenta ahorro</h1>
+        </div>
+        <div class="cuenta">
+            <h1>Cuenta nómina</h1>
+        </div>
+    </div>
+
+    <footer>
+        <ul>
+            <li>Política de privacidad</li>
+            <li>Términos y condiciones de uso</li>
+            <li>Política de cookies</li>
+            <li>Atención al cliente</li>
+        </ul>
+        <span>Copyright 2022 UCOBank</span>
+    </footer>
+
+    <div id="loginModal" class="modal" >
+        <span class="close" onclick="closeLoginModal()"></span>
+        <div class="modal-content">
+            <img class="times" onclick="closeLoginModal()" src="icons/close.svg"></img>
+            <h1>ACCESO</h1>
+            <form action="">
+                <input type="text" name="" id="" placeholder="DNI">
+                <input type="password" name="" id="" placeholder="Clave">
+                <input type="submit" value="Acceder">
+            </form>    
+            <p>¿No recuerdas tu clave o crees que te la han robado?</p>
+            <p>Accede a una de nuestras sucursales lo antes posible y te ayudaremos.</p>
+        </div>
+    </div>
+
+    <div id="registerModal" class="modal" >
+        <span class="close" onclick="closeRegisterModal()"></span>
+        <div class="modal-content">
+            <img class="times" onclick="closeRegisterModal()" src="icons/close.svg"></img>
+            <h1>REGISTRO</h1>
+            <form action="">
+                <input type="text" name="" id="" placeholder="Nombre y apellidos">
+                <input type="text" name="" id="" placeholder="DNI">
+                <input type="text" name="" id="" placeholder="Correo electrónico">
+                <input type="text" placeholder="Número de teléfono">
+                <input type="submit" value="Registrarse">
+            </form>
+            <p>Después de registrarte, deberás acudir a una sucursal para verificar tu cuenta.</p>
+            <p>Una vez verificada, tendrás todas las funcionalidades disponibles.</p>    
+        </div>
+    </div>
+
+    <script>
+        function openLoginModal() {
+            document.getElementById("loginModal").style.opacity = "1";
+            document.getElementById("loginModal").style.pointerEvents = "auto";
+        }
+
+        function closeLoginModal() {
+            document.getElementById("loginModal").style.opacity = "0";
+            document.getElementById("loginModal").style.pointerEvents = "none";
+        }
+
+        function openRegisterModal() {
+            document.getElementById("registerModal").style.opacity = "1";
+            document.getElementById("registerModal").style.pointerEvents = "auto";
+        }
+
+        function closeRegisterModal() {
+            document.getElementById("registerModal").style.opacity = "0";
+            document.getElementById("registerModal").style.pointerEvents = "none";
+        }
+    </script>
+</body>
+</html>

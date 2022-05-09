@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/cuenta.css">
+    <title>Cuenta</title>
+</head>
+<body>
+    <ul class="top-bar">
+        <li><img src="logo.png" alt="Logo UCOBank"></li>
+        <li class="buttons">
+            <div class="notificationsIcon" onclick="openNotificationModal()">
+                <img src="icons/bell.svg">
+            </div>
+            <div class="signout">
+                <a href=""><img src="icons/signout.svg"></a>
+            </div>
+        </li>
+    </ul>
+
+
+    <div id="notificationModal" class="modal" >
+        <img class="times" onclick="closeNotificationModal()" src="icons/close.svg"></img>
+        <h1>Notificaciones</h1>
+        <div class="notifications">
+            <div class="notification">hola</div>
+            <div class="notification">hola</div>
+            <div class="notification">hola</div>
+            <div class="notification">hola</div>
+            <div class="notification">hola</div>
+            <div class="notification">hola</div>
+        </div>
+        <span class="delete">Vaciar la bandeja de entrada</span>
+    </div>
+
+    <script>
+        function openNotificationModal() {
+            document.getElementById("notificationModal").style.opacity = "1";
+            document.getElementById("notificationModal").style.pointerEvents = "auto";
+        }
+
+        function closeNotificationModal() {
+            document.getElementById("notificationModal").style.opacity = "0";
+            document.getElementById("notificationModal").style.pointerEvents = "none";
+        }
+    </script>
+</body>
+</html>
