@@ -2,19 +2,22 @@
     require("../common/DBConnection.php");
     require("../../classes/cliente.php");
     
-    $DB = new DBConnection(); 
 
     function getAllUsers()
     {
-        $DB->OpenCon();
-        $consulta = "SELECT * FROM clientes"; 
-        if($resultado  = $Connection->query($consulta))
+        $DB = new DBConnection(); 
+        $Connection = $DB->OpenCon();
+        $consulta = "SELECT * FROM i92rurof.clientes "; 
+        if ($resultado = $Connection->query($consulta)) 
         {
-            while ($fila = $resultado->fetch_row()) {
-                printf ("%s (%s)\n", $fila[0], $fila[1]);
+            $row = $resultado->fetch_array(MYSQLI_ASSOC);
+            foreach ($resultado as $row)
+            {
+                $ClienteAux = new Cliente($row['name'], $row['DNI'], $row['sucursal'], $row['telefono'], $row['correo'], $row['fecha_nacimiento'], $row['password'], $row['name']); 
             }
-            $resultado->close();
+ 
         }
+        $resultado->close(); 
     }
 
     function isValidUser(string $user, string $password)
@@ -22,5 +25,6 @@
         
 
     }
+
     getAllUsers();
 ?>

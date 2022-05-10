@@ -1,19 +1,24 @@
+
+
 <?php
 
-    class DBConnection
+class DBConnection
+{
+    private $servername = "oraclepr.uco.es:3306/i92rurof";
+    private $username = "i92rurof";
+    private $password = "bdPW_2122";
+
+    public function OpenCon()
     {
-        private $server = "sql211.epizy.com";
-        private $user = "epiz_31650333";
-        private $pass = "ggzgUIXnNAvOaLM";
-        private $db = "epiz_31650333_ucobank";
-
-        public function OpenCon()
+        $conn = new mysqli($this->servername, $this->username, $this->password);
+        if ($conn->connect_error) 
         {
-            $conn =  new PDO("mysql:host={$this->server};dbname={$this->db};charset=utf8", $this->user, $this->pass);
-            return $conn;
+            die("Connection failed: " . $conn->connect_error);
         }
+        return $conn;
     }
-    $db = new DBConnection();
-    $db->OpenCon(); 
 
-?>
+}
+
+
+?> 
