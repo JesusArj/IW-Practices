@@ -1,0 +1,253 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.top-bar{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    background-color: white;
+    position: sticky;
+    top: 0;
+    align-items: center;
+}
+
+.top-bar img{
+    height: 2rem;
+}
+
+.access{
+    background-color: #2E4053 ;
+    padding: 0.5rem 1rem;
+    border-radius: 0.2rem;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: baseline;
+}
+
+.access img{
+    filter: invert(100%);
+    height: 0.9rem;
+    margin-right: 0.6rem;
+}
+
+.ppal{
+    height: calc(100vh - 6rem);
+    background-color: #2E4053;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    background: url(img/people.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+
+.ppal div{
+    background: #2e4053e3;
+    color: white;
+    padding: 2rem;
+    margin: 3rem;
+    border-radius: 0.3rem;
+}
+
+.ppal div span{
+    background-color: rgb(24, 184, 170);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 1rem 2rem;
+    display: inline-block;
+    border-radius: 0.2rem;
+    margin-top: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.ppal div span:hover{
+    background-color: rgb(23, 163, 152);
+}
+
+.ppal div p{
+    margin-top: 1.5rem;
+}
+
+.ppal div p a{
+    text-decoration: none;
+    color: #43e9ff;
+}
+
+.ppal div p a:hover{
+    text-decoration: underline;
+}
+
+.options{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #f8f8f8;
+    justify-content: space-around;
+    padding: 8rem 3rem;
+}
+
+.options div{
+    width: 15rem;
+    height: 15rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    background-color: white;
+    margin: 1.7rem 1.5rem;
+    text-align: center;
+    padding: 2rem;
+}
+
+.options div:hover{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.options div img{
+    height: 78%;
+}
+
+.options div h2{
+    text-align: center;
+    font-size: 1.25rem;
+    margin-top: 1rem;
+}
+
+.cuentas{
+    width: 100%;
+    background-color: #f8f8f8;
+    display: flex;
+    padding: 3rem;
+    justify-content: space-between;
+}
+
+.cuenta{
+    width: 48%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: white;
+    padding: 1.5rem;
+}
+
+.cuenta h1{
+    text-align: center;
+    color: #2E4053;
+}
+
+
+
+footer{
+    padding: 2rem;
+    background-color: #e6e6e6;
+}
+
+footer ul{
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    padding-bottom: 3rem;
+    padding-top: 1rem;
+    flex-wrap: wrap;
+}
+
+footer ul li{
+    margin: 1rem;
+    text-align: center;
+    color: #505050;
+}
+
+footer ul li:hover{
+    color: black;
+    cursor: pointer;
+}
+
+
+footer span{
+    display: block;
+    text-align: center;
+    color: #777777;
+}
+
+
+
+
+.modal{
+    background-color: rgba(0,0,0,0.7);
+    position: fixed;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    opacity:0;
+    display: flex;
+    align-items: center;
+    pointer-events:none;
+    transition: all 0.4s;
+}
+
+.modal-content{
+    position: relative;
+    background-color: white;
+    border-radius: 7px;
+    margin: auto;
+    padding: 3rem;
+    width: 40rem;
+    margin: auto;
+    text-align: justify;
+}
+
+.modal .times{
+    width: 4rem;
+    position: absolute;
+    top: 0.8rem;
+    right: 1.2rem;
+    cursor: pointer;
+}
+
+.modal .close{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.modal h1{
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+}
+
+.modal form input{
+    width: 100%;
+    margin: 0.5rem 0;
+    padding: 0.6rem;
+    outline: 0;
+    border: 0;
+    border-radius: 0.2rem;
+    background-color: #f0f0f0;
+    font-size: 1rem;
+}
+
+.modal form input[type=submit]{
+    background-color: #3788df;
+    color: white;
+    font-weight: bold;
+}
+
+.modal form input[type=submit]:hover{
+    cursor: pointer;
+    background-color: #2869af;
+}
+
+.modal form{
+    margin-bottom: 1rem;
+    margin-top: 3rem;
+}
+
+.modal p{
+    text-align: center;
+    margin-top: 0.5rem;
+    font-size: 0.86rem;
+}
